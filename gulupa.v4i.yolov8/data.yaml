@@ -1,0 +1,13 @@
+train: C:/Users/CAMILA CAÑON/Desktop/modelov4/gulupa.v4i.yolov8/train
+val: C:/Users/CAMILA CAÑON/Desktop/modelov4/gulupa.v4i.yolov8/valid
+test: C:/Users/CAMILA CAÑON/Desktop/modelov4/gulupa.v4i.yolov8/test
+
+nc: 6
+names: ['Estado-1', 'Estado-2', 'Estado-3', 'Estado-4', 'Estado-5', 'Estado-6']
+
+roboflow:
+  workspace: gulupa
+  project: gulupa
+  version: 4
+  license: Public Domain
+  url: https://universe.roboflow.com/gulupa/gulupa/dataset/4
