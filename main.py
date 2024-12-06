@@ -2,15 +2,12 @@ import torch
 from fastapi import FastAPI, File, UploadFile
 from PIL import Image
 from io import BytesIO
-
-app = FastAPI()
 from ultralytics import YOLO
 
-# Carga el modelo YOLOv8
-model = YOLO('yolov8n.pt')
+app = FastAPI()
 
-# Cargar el modelo entrenado desde un archivo local
-model = torch.hub.load('.', 'custom', path='yolov8n.pt', source='local')
+# Cargar el modelo YOLO desde un archivo local
+model = YOLO('yolov8n.pt')
 
 @app.post("/predict/")
 async def predict(file: UploadFile = File(...)):
